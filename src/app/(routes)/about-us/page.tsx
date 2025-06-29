@@ -1,9 +1,20 @@
-import React from 'react'
+import AboutCompanyDetails from "@/components/AboutCompanyDetails";
+import AboutForm from "@/components/AboutForm";
+import AboutHero from "@/components/AboutHero";
+import Footer from "@/components/Footer";
+import WhyChooseSection from "@/components/WhyChooseSection";
+import React from "react";
 
 const About_us = () => {
   return (
-    <div>About_us</div>
-  )
-}
+    <>
+      <AboutHero />
+      <AboutCompanyDetails />
+      <WhyChooseSection />
+      <AboutForm />
+      <Footer />
+    </>
+  );
+};
 
-export default About_us
+export default About_us;

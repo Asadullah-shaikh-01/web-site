@@ -57,7 +57,8 @@ const Team = () => {
             Meet Our Team
           </h2>
           <p className="text-sm md:text-lg text-gray-200 mt-4 max-w-2xl mx-auto">
-            Passionate, skilled, and ready to build the future — one product at a time.
+            Passionate, skilled, and ready to build the future — one product at
+            a time.
           </p>
         </div>
 
