@@ -1,9 +1,14 @@
-import React from 'react'
+import CareerHome from "@/components/CareerHome";
+import CareerProjects from "@/components/CareerProjects";
+import React from "react";
 
 const Career = () => {
   return (
-    <div>Career</div>
-  )
-}
+    <>
+      <CareerProjects />
+      <CareerHome />
+    </>
+  );
+};
 
-export default Career
+export default Career;

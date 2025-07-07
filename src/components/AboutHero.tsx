@@ -1,69 +1,68 @@
 "use client";
-import React from "react";
-import { WavyBackground } from "../components/ui/wavy-background";
-import Image from "next/image";
+// import WorldMap from "@/components/ui/world-map";
+import { motion } from "motion/react";
 
 export function AboutHero() {
   return (
-    <>
-      <WavyBackground className="max-w-4xl mx-auto pb-40">
-        <p className="text-2xl md:text-4xl lg:text-7xl text-white font-bold inter-var text-center">
-          Sovorun – Your Trusted Partner in Business Growth
+    <div className=" py-40 dark:bg-black bg-white w-full">
+      <div className="max-w-7xl mx-auto text-center">
+        <p className="font-bold text-xl md:text-4xl dark:text-white text-black">
+          Remote{" "}
+          <span className="text-neutral-400">
+            {"Connectivity".split("").map((word, idx) => (
+              <motion.span
+                key={idx}
+                className="inline-block"
+                initial={{ x: -10, opacity: 0 }}
+                animate={{ x: 0, opacity: 1 }}
+                transition={{ duration: 0.5, delay: idx * 0.04 }}
+              >
+                {word}
+              </motion.span>
+            ))}
+          </span>
         </p>
-        <p className="text-base md:text-lg mt-4 text-white font-normal inter-var text-center">
-          Leverage the power of canvas to create a beautiful hero section
+        <p className="text-sm md:text-lg text-neutral-500 max-w-2xl mx-auto py-4">
+          Break free from traditional boundaries. Work from anywhere, at the
+          comfort of your own studio apartment. Perfect for Nomads and
+          Travellers.
         </p>
-      </WavyBackground>
-
-      <div className="container px-4">
-        <div className="flex flex-col md:flex-row justify-between items-start gap-8 py-[40px]">
-          {/* Left Section */}
-          <div className="md:w-[40%] w-full">
-            <h2 className="text-[24px] text-[#fff] mb-[10px]">
-              About Sovorun Technology
-            </h2>
-            <h1 className="text-[32px] md:text-[42px] text-white leading-[50px] md:leading-[60px]">
-              More than a software development company
-            </h1>
-          </div>
-
-          {/* Right Section */}
-          <div className="md:w-[60%] w-full">
-            <p className="text-[17px] text-[#fff] leading-[25px] mb-[15px]">
-              At Sovorun, we believe in using technology to drive business
-              growth and deliver real results. Based in Thane, Maharashtra, we
-              offer more than software development. We provide IT solutions and
-              digital marketing services that help businesses succeed.
-            </p>
-            <p className="text-[17px] text-[#fff] leading-[25px] mb-[15px]">
-              Our mission is to empower companies with scalable, effective
-              software, digital strategies, and IT support. We focus on bridging
-              technology and business needs, creating custom solutions that
-              align with your goals and keep you competitive. By staying
-              up-to-date with industry trends and the latest technology, we make
-              achieving your objectives simpler and faster.
-            </p>
-            <p className="text-[17px] text-[#fff] leading-[25px] mb-[15px]">
-              We aim to become a global leader in software development,
-              recognized for excellence, innovation, and client satisfaction.
-              Our vision is a future where businesses of all sizes use
-              technology to overcome challenges and explore new opportunities.
-            </p>
-          </div>
-        </div>
-
-        {/* Image Section */}
-        <div className="mt-6">
-          <Image
-            src="/images/IT-SOLUTION-IMG.jpg"
-            alt="IT Solution"
-            width={1325}
-            height={600}
-            className="w-full h-auto rounded-xl shadow-lg"
-          />
-        </div>
       </div>
-    </>
+      {/* <WorldMap
+        dots={[
+          {
+            start: {
+              lat: 64.2008,
+              lng: -149.4937,
+            }, // Alaska (Fairbanks)
+            end: {
+              lat: 34.0522,
+              lng: -118.2437,
+            }, // Los Angeles
+          },
+          {
+            start: { lat: 64.2008, lng: -149.4937 }, // Alaska (Fairbanks)
+            end: { lat: -15.7975, lng: -47.8919 }, // Brazil (Brasília)
+          },
+          {
+            start: { lat: -15.7975, lng: -47.8919 }, // Brazil (Brasília)
+            end: { lat: 38.7223, lng: -9.1393 }, // Lisbon
+          },
+          {
+            start: { lat: 51.5074, lng: -0.1278 }, // London
+            end: { lat: 28.6139, lng: 77.209 }, // New Delhi
+          },
+          {
+            start: { lat: 28.6139, lng: 77.209 }, // New Delhi
+            end: { lat: 43.1332, lng: 131.9113 }, // Vladivostok
+          },
+          {
+            start: { lat: 28.6139, lng: 77.209 }, // New Delhi
+            end: { lat: -1.2921, lng: 36.8219 }, // Nairobi
+          },
+        ]}
+      /> */}
+    </div>
   );
 }
 

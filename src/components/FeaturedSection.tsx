@@ -1,8 +1,8 @@
-'use client';
-import React from 'react';
+"use client";
+import React from "react";
 import ProjectData from "@/data/project_done.json";
-import Link from 'next/link';
-import { BackgroundGradient } from './ui/background-gradient';
+import Link from "next/link";
+import { BackgroundGradient } from "./ui/background-gradient";
 
 interface Project {
   id: number;
@@ -26,17 +26,16 @@ const FeaturedSection = () => {
   return (
     <section className="py-16 bg-gray-100 dark:bg-black">
       <div className="max-w-7xl mx-auto px-4">
-        {/* Section Header */}
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white">
             Completed Projects for Clients
           </h2>
           <p className="mt-4 text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-            Here are some of the most recent projects we've successfully delivered to clients using modern web technologies.
+            Here are some of the most recent projects we've successfully
+            delivered to clients using modern web technologies.
           </p>
         </div>
 
-        {/* Projects Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
           {projects.map((project: Project) => (
             <div key={project.id} className="flex justify-center">
@@ -59,7 +58,6 @@ const FeaturedSection = () => {
           ))}
         </div>
 
-        {/* View All Projects CTA */}
         <div className="mt-16 text-center">
           <Link
             href="/projects"
